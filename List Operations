@@ -1,0 +1,24 @@
+todo = ["laundry", "grocery shopping", "call mom", "watch Netflix", "clean kitchen", "nap"]
+
+todo[3]="read a book"
+print(todo)
+
+todo.remove("call mom")
+print(todo)
+
+todo.append("meal prep")
+todo.append("take a walk")
+print(todo)
+
+todo.pop(0)
+print(todo)
+todo.append("laundry")
+print(todo)
+
+todo.insert(0,"meditate")
+print(todo)
+
+
+top_3 = todo[0:3]
+print("Top_3 :",top_3)
+
