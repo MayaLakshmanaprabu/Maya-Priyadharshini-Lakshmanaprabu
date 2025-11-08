@@ -1,0 +1,49 @@
+# A) What is the name of a built-in function in the "random" package that can
+# generate random integers?
+
+# B) Programming: Using the function from, exercise A, generate 10 integers that
+# are between 1 and 100. Create a list. Call it rand_numbers. Use this list to
+# save the generated integers. Print the list. Calculate the average of the numbers
+# in rand_numbers and display the result.
+# (Feel free to write a function for this calculation.)
+# Write your code below here
+
+# C) Is there any built-in function in Python that can calculate average of
+# numbers? If "yes" use that function to calculate the average of rand_numbers
+# and display the result.
+# Write your code below here
+
+# D) Is the result of section B and C the same?
+
+
+
+
+from random import randint
+from statistics import mean
+
+
+def avg_num(numbers):
+  result = sum(numbers)/len(numbers)
+  return result
+
+rand_numbers = []
+
+for i in range (10):
+  num = randint(1,100)
+  rand_numbers.append(num)
+
+print("Random Numbers:",rand_numbers)
+
+average = avg_num(rand_numbers)
+
+print("Average of Numbers:", average)
+
+average_builtin = mean(rand_numbers)
+
+print("Average of Numbers in (Built_in _func):",average_builtin)
+
+if(average == average_builtin):
+  print("Yes,both averages are the same.")
+else:
+  print("No,they are different.")
+
