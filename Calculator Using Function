@@ -1,0 +1,55 @@
+# Create a Calculator that can perform four basic operations: addition,
+# subtraction, multiplication, and division! Your program asks the user to input
+# the operation they want to perform and input two numbers. Then it performs the
+# operation and display the result.
+
+# Instructions: Write a function for each arithmetic operation (add, subtract,
+# multiply, divide). If the user entered an invalid operation, print an
+# appropriate message to inform them. Your program should handle errors (like
+# dividing by zero) and invalid input (like entering a letter instead of a
+# number).
+
+
+
+
+def add_numbers(a,b):
+  return a + b
+def sub_numbers(a,b):
+  return a - b
+def mul_numbers(a,b):
+  return a * b
+def div_numbers(a,b):
+  if b!= 0:
+    return a / b
+  else:
+    return "Division by Zero! Error!"
+
+def calculator():
+  num1 = int(input("Enter the value_1:"))
+  num2 = int(input("Enter the value_2:"))
+  arth_ope = (input("Enter the arithmetic Operation:"))
+
+  if arth_ope == "add":
+    result = add_numbers(num1 , num2)
+
+  elif arth_ope == "sub":
+    result = sub_numbers(num1 , num2)
+
+  elif arth_ope == "mul":
+    result = mul_numbers(num1 , num2)
+
+  elif arth_ope == "div":
+    result = div_numbers(num1 , num2)
+
+  else:
+    result = "Invalid Operator"
+
+  print("Final Output:" ,result)
+
+calculator()
+
+
+
+
+
+
